@@ -10,6 +10,8 @@ ShiDi Zhao - zhaosh28
 
 Sidharth Bajwa - bajwasid
 
+Joseph Bargan - barganjo
+
 
 Method of communication:
 
