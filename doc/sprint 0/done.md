@@ -4,7 +4,7 @@ This includes different definitions for an acceptable state and completely finis
 *As a user i want to post messages and pictures where other users can ask questions, post comments, share the post and rate my post.
 
 	-Functional: Users are able to post text messages, accompanied by the date of when it was posted. Other users are able to reply and post comments in response to the original post
-	
+
 	-Acceptable: Users are able to post text, and or picture messages accompanied by the date of when it was posted. Other users are able to reply with text and or pictures comments in response to the original post. 
 	-Finished: Users are able to post text, and or picture messages accompanied by the date of when it was posted. Users are also able to attach other types of documents at the bottom of the post. .Other users are able to reply with text and or pictures comments in response to the original post. In addition to this, other users are also able to share the post internally within the app or externally. 
 
