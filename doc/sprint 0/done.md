@@ -23,12 +23,18 @@ This includes different definitions for an acceptable state and completely finis
 	-Finished: Users are also able to fill out a bio for their account that is visible to other users. 
 
 *As a user, I would like to be able to see posts related to only one specific category, so that I can quickly find the topic I am looking for.
+
 	-Acceptable: Users are able to filter posts and only view posts that are posted into a specific category that they searched for
+	
 	-Finished:  Users are able to filter the posts from newest, best rated, etc. .Users are also able to view posts from multiple categories that they searched and chose from.
 
 * As a user, I would like to be able to search on the forum, so that I can look for a specific kind of post I want (such as looking for a textbook or looking for a job).
+
 	-Acceptable: Users are able to search for specific posts using keywords or title of posts
+	
 * As a user, I would like to be able to save/ping a post, so that I can look at it later.
+
 	-Functional: Users are able to save a post, creating a shortcut in their account that they can use to easily access the post
+	
 	-Acceptable: Users are able to get notifications whenever a new comment is made on the post
 
