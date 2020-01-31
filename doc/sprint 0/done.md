@@ -1,6 +1,13 @@
-A description of our team's definition of what it means for each user to be done. 
+A description of our team's definition of what it to be done. 
 
-This includes different definitions for an acceptable state and completely finished for each of the user stories
+Functionally done: All of the necessary functions of the user stories are completed, operational, and reasonably stable.
+
+Done Acceptably : All operations asked of the user stories are functional, stable, with very limited bugs. This means that the app is smooth to use and controlled reasonably well by the end user(s).
+
+Fully Finished: All optional/un-necessary features included (and not) from the user stories are completed. Build is bug-free, reasonably secure, and intuitive to use by the end user.
+
+Below are different definitions for an acceptable state and completely finished for each of the user stories
+
 
 *As a user i want to post messages and pictures where other users can ask questions, post comments, share the post and rate my post.
 
