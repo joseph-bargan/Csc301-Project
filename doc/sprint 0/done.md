@@ -1,4 +1,5 @@
 A description of our team's definition of what it means for each user to be done. 
+
 This includes different definitions for an acceptable state and completely finished for each of the user stories
 
 *As a user i want to post messages and pictures where other users can ask questions, post comments, share the post and rate my post.
