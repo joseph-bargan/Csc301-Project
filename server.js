@@ -26,6 +26,8 @@ mongoose.Promise = global.Promise;
 var routes = require('./app/routes/TestRoute'); //importing routes
 routes(app); //telling app the use these routes
 
+app.set('views', './app/views');
+app.set('view engine', 'ejs');
 
 app.listen(port);
 
