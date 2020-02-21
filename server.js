@@ -6,30 +6,20 @@ var path = require('path');
 
 var mongoose = require('mongoose');
 
-var mongo = require('mongodb');
-var MongoClient = mongo.MongoClient;
-var url = "mongodb://localhost:27017/";
+//Configurations
+app.set('views', './app/views');
+app.set('view engine', 'ejs');
 
-MongoClient.connect(url, function (err, db) {
-    if (err) throw err;
-    var dbo = db.db("mydb");
-    dbo.createCollection("customers", function (err, res) {
-        if (err) throw err;
-        console.log("Collection created!");
-        db.close();
-    });
-});
+const configMongoose = require('./config/mongoose');
+const db = configMongoose();
 
-
-mongoose.Promise = global.Promise;
 
 var routes = require('./app/routes/TestRoute'); //importing routes
 routes(app); //telling app the use these routes
 
-app.set('views', './app/views');
-app.set('view engine', 'ejs');
+
+
 
 app.listen(port);
-
 console.log('working');
 
