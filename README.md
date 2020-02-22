@@ -1,7 +1,10 @@
-# NodejsWebApp1
+
 developed in Visual Studio
+
 language: javascript
+
 framework: nodejs
+
 database: mongodb
 
 Module Requirements:
@@ -10,8 +13,9 @@ Module Requirements:
 	ejs
 	mongodb
 
-Installations
+Installations:
 	https://docs.mongodb.com/manual/installation/
+	
 	https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16
 
 	For Modules:
