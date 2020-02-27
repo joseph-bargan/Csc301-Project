@@ -8,7 +8,7 @@ var TestSchema = new schema({
 
     name: {
         type: String,
-        required: 'test name'
+ 
     },
 });
 
