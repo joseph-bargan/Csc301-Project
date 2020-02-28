@@ -10,6 +10,8 @@ var mongoose = require('mongoose');
 app.set('views', './app/views');
 app.set('view engine', 'ejs');
 
+app.locals.mongoose = mongoose;
+
 const configMongoose = require('./config/mongoose');
 const db = configMongoose();
 
