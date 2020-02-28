@@ -9,6 +9,7 @@ var mongoose = require('mongoose');
 //Configurations
 app.set('views', './app/views');
 app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'));
 
 const configMongoose = require('./config/mongoose');
 const db = configMongoose();

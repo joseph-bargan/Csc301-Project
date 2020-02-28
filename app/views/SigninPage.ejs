@@ -1,47 +1,43 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<link rel="stylesheet" href="/StyleSheet1.css">
+	<title>UTM Talk</title>
+</head>
 <body>
 	
-	<!-- Use the 'title' property to render a title element  -->
-	<h1> Sign In </h1>
-
-
-	<form method="post">
-		<div>
-		<label>First Name:</label>
-		<input type="text" name="firstName" value = ""/>
-		</div>
-		<div>
-		<label>Last Name:</label>
-		<input type="text" name="lastName" value = "" />
-		</div>
-		<div>
-		<label>Email:</label>
-		<input type="text" name="email" value = ""/>
-		</div>
-		<div>
-
-		<label>User name:</label>
-		<input type="text" name="username" value = "" />
-		</div>
-		<div>
-		<label>Password:</label>
-		<input type="text" name="password" value = "" />
-		</div>
-
-		<div>
-		<label>Role:</label>
-		<input type="text" name="role" value = "" />
-		</div>
+		<div class="img"></div>
+		<form method="post">
+			
+			<div class="register">
+				<div class="container"></div>
+				<h1>Sign Up</h1>
+				<!-- <label>First Name:</label> -->
+				<p> First Name </p>
+				<input type="text" name="firstname" placeholder="First Name">
 		
-		<div>
+				
+				<!-- <label>Last Name:</label> -->
+				<p> Last Name </p>
+				<input type="text" name="lastname" placeholder="Last Name">
 		
-		<input type="submit" value="Create user" />
+				<!-- <label>Email:</label> -->
+				<p> Email Address </p>
+				<input type="text" name="email" placeholder="E-mail"/>
+
+				<!-- <label>Username:</label> -->
+				<p> Username </p>
+				<input type="text" name="username" placeholder = "Username" />
+		
+				<!-- <label>Password:</label> -->
+				<p> Password </p>
+				<input type="password" name="password" placeholder = "********" />
+		
+				<button type="submit">Create User</button>
+				
+		
 		</div>
 		</form>
-
-
-
-
+	
 </body>
 </html>
