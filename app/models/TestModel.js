@@ -12,4 +12,19 @@ var TestSchema = new schema({
     },
 });
 
+var User = new schema({
+
+    firstname: {
+        String,
+    },
+
+    lastname: {
+        String,
+    },
+
+    email: String,
+    password: String,
+});
+
+mongoose.model('User', User);
 mongoose.model('Test', TestSchema);

@@ -2,6 +2,7 @@
 
 var mongoose = require('mongoose');
 var test = mongoose.model('Test');
+var User = mongoose.model('User');
 
 var path = require('path');
 
@@ -23,6 +24,9 @@ exports.redirect_posts = function (req, res) {
     */
 
     //TODO: Read (res.body) for login info
+    const user = new User(req.body);
+    console.log(req.body);
+    user.save();
 
     res.redirect('/posts')
 };
