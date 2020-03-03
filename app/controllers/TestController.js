@@ -11,7 +11,7 @@ exports.render = function (req, res) {
     res.render('SigninPage.ejs')
 };
 
-exports.sendpost = function (req, res) {
+exports.redirect_posts = function (req, res) {
 
     /*
     const user = new test(req.body);
@@ -22,5 +22,19 @@ exports.sendpost = function (req, res) {
     });
     */
 
-    res.render('UI.ejs')
+    //TODO: Read (res.body) for login info
+
+    res.redirect('/posts')
+};
+
+exports.to_post = function (req, res) {
+
+    res.render('UI.ejs');
+};
+
+exports.read_post = function (req, res) {
+
+    //TODO: Read (res.body) for post text
+
+    res.render('UI.ejs');
 };
