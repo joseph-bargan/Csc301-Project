@@ -28,6 +28,7 @@ exports.redirect_posts = function (req, res) {
     console.log(req.body);
     user.save();
 
+    //res.json(user);
     res.redirect('/posts')
 };
 
@@ -39,6 +40,11 @@ exports.to_post = function (req, res) {
 exports.read_post = function (req, res) {
 
     //TODO: Read (res.body) for post text
+    var l = new test(req.body);
+    console.log(l);
 
-    res.render('UI.ejs');
+    res.json(l);
+
+
+    //res.render('UI.ejs');
 };
