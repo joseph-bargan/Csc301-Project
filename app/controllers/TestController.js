@@ -2,6 +2,7 @@
 
 var mongoose = require('mongoose');
 var test = mongoose.model('Test');
+var User = mongoose.model('User');
 
 var path = require('path');
 
@@ -9,33 +10,41 @@ var path = require('path');
 exports.render = function (req, res) {
 
     res.render('SigninPage.ejs')
-    
 };
 
-exports.to_posts = function (req, res) {
+exports.redirect_posts = function (req, res) {
 
-    res.redirect('../posts')
-};
-
-exports.posts = function (req, res) {
-    res.render('UI.ejs')
-};
-
-exports.sendpost = function (req, res) {
-
-    
-    const user = new test({ name: "testie" });
+    /*
+    const user = new test(req.body);
     user.save(function (err, u) {
         if (err)
             res.send(err);
-        res.render('UI.ejs', { mongoose: mongoose });
-
-        test.find(function (err, tt) {
-	         console.log(tt); 
-	 });
-
+        res.json(u);
     });
-    
+    */
 
-    //res.render('UI.ejs')
+    //TODO: Read (res.body) for login info
+    const user = new User(req.body);
+    console.log(req.body);
+    user.save();
+
+    //res.json(user);
+    res.redirect('/posts')
+};
+
+exports.to_post = function (req, res) {
+
+    res.render('UI.ejs');
+};
+
+exports.read_post = function (req, res) {
+
+    //TODO: Read (res.body) for post text
+    var l = new test(req.body);
+    console.log(l);
+
+    res.json(l);
+
+
+    //res.render('UI.ejs');
 };

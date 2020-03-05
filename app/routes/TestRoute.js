@@ -6,9 +6,10 @@ module.exports = function (app) {
 
     app.get('/', index.render);
 
-    app.post('/', index.to_posts);
+    app.post('/', index.redirect_posts);
 
-    app.get('/posts', index.posts);
+    app.get('/posts', index.to_post);
 
-    app.post('/posts', index.sendpost);
+    app.post('/posts', index.read_post);
+        
 };

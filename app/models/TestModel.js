@@ -12,4 +12,24 @@ var TestSchema = new schema({
     },
 });
 
+const User = new schema({
+
+    firstname: {
+        type: String
+    },
+
+    lastname: {
+        type: String,
+    },
+
+    email: String,
+    password: String,
+});
+
+User.set('toJSON', {
+    getters: true,
+    virtuals: true
+});
+
+mongoose.model('User', User);
 mongoose.model('Test', TestSchema);
