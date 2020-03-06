@@ -1,146 +1,161 @@
-﻿body {
+﻿* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url("cover.jpg");
-    background-size: cover;
-    height: 100vh;
 }
 
+.back {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url("cover.jpg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
 img {
-    width: 170px;
+    width: 130px;
     position: absolute;
     left: 50%;
     top: 5%;
     transform: translate(-50%, -80%);
 }
 
+
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     width: 360px;
+    margin: 5% auto;
+    height: 580px;
+    background: none;
+    padding: 10px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+#register {
+    
+    height: 520px;
+    margin-left: -25px;
     background: rgba(0,0,0,.6);
     box-shadow: 0 15px 25px rgba(0,0,0,.5);
-    padding: 60px 40px 40px 40px;
+    padding: 25px;
     border-radius: 25px;
-    box-sizing: border-box;
 }
-    /*
-.container h1{
+#login {
+    top: 100px;
+    height: 320px;
+    margin-left: -25px;
+    background: rgba(0,0,0,.6);
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+    padding: 40px 25px 25px 25px;
+    border-radius: 25px;
     
-    margin: 10px 0 20px;
-    padding:0;
-    color: white;
-    text-align: center;
-    letter-spacing: 1px;
-    text-transform: uppercase;
 }
-    */
-    .container .input-box {
-        position: relative;
-        margin-top: 5px;
-    }
+.forms {
+    top: 5px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+    
+}
 
-        .container .input-box input {
-            width: 100%;
-            margin-bottom: 35px;
-            padding: 12px 0;
-            color: #fff;
-            font-size: 14px;
-            border: none;
-            border-bottom: 1px solid white;
-            outline: none;
-            background: transparent;
-            letter-spacing: 2px;
-        }
+.input-box {
+    position: relative;
+    margin-top: 5px;
+}
 
-        .container .input-box label {
-            position: absolute;
-            top: 0;
-            left: 0;
-            padding: 10px 0;
-            font-size: 14px;
-            color: white;
-            pointer-events: none;
-            transition: .5s;
-            letter-spacing: 2px;
-        }
-
-        .container .input-box input:focus ~ label, .container .input-box input:valid ~ label {
-            top: -25px;
-            left: 0;
-            color: aquamarine;
-            font-size: 16px;
-        }
-
-        .container .input-box input:focus, .container .input-box input:valid, .container .input-box input:hover {
-            border-bottom: 1px solid aquamarine;
-        }
-
-    .container button {
-        background: aquamarine;
-        border: none;
-        outline: none;
-        color: black;
-        border: 2px solid black;
-        padding: 10px 20px;
-        letter-spacing: 1px;
+    .input-box input {
+        width: 100%;
+        margin-bottom: 35px;
+        padding: 12px 0;
+        color: #fff;
         font-size: 14px;
-        cursor: pointer;
-        border-radius: 15px;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        background: transparent;
+        letter-spacing: 2px;
     }
 
-        .container button:hover, .container button:active {
-            background-color: lightcoral;
-        }
-
-    .container input[type="checkbox"] {
-        vertical-align: middle;
-        position: relative;
-        bottom: 0.5px;
+    .input-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 14px;
+        color: white;
+        pointer-events: none;
+        transition: .5s;
+        letter-spacing: 2px;
     }
-/*
-.container p{
+
+    .input-box input:focus ~ label, .input-box input:valid ~ label {
+        top: -25px;
+        left: 0;
+        color: aquamarine;
+        font-size: 16px;
+    }
+
+    .input-box input:focus, .input-box input:valid, .input-box input:hover {
+        border-bottom: 1px solid aquamarine;
+    }
+
+button {
+    background: aquamarine;
+    border: none;
+    outline: none;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+    button:hover, button:active {
+        background-color: lightcoral;
+    }
+
+input[type="checkbox"] {
+    vertical-align: middle;
+    position: relative;
+    bottom: 0.5px;
+}
+
+p {
     color: white;
     font-size: 14px;
     margin-top: 0;
     margin-bottom: 20px;
     letter-spacing: 1px;
-
 }
 
-.container .message{
-    
+.container .message {
     color: white;
     font-size: 14px;
     letter-spacing: 1px;
 }
 
-.container .message a{
-    color:aquamarine;
-    text-decoration: none;
-}
-
-.container .message a:hover{
-    border-bottom: 1px solid aquamarine;
-}
-
-.container .switch{
+.container .switch {
     outline: none;
     background: none;
-    color:aquamarine;
+    color: aquamarine;
     padding: 0;
     border-radius: 0;
 }
-.container .switch:hover, .container .switch:active{
-    background: none;
-    outline: none;
-    border-bottom: 1px solid aquamarine;
-}
-*/
 
-.login /*or .register*/ {
-    display: none;
+    .container .switch:hover, .container .switch:active {
+        background: none;
+        outline: none;
+        border-bottom: 1px solid aquamarine;
+    }
+
+
+#login /*or .register*/ {
+    left: 50px;
+}
+
+#register {
+    left: 450px;
 }
