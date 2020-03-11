@@ -3,6 +3,8 @@ var express = require('express');
 var port = process.env.PORT || 3000;
 const app = express();
 var bodyParser = require("body-parser");
+var methodOverride = require('method-override');
+var session = require('express-session');
 var path = require('path');
 
 var mongoose = require('mongoose');
@@ -12,8 +14,15 @@ app.set('views', './app/views');
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(methodOverride());
+
+app.use(session({
+    saveUnintialized: true,
+    resave: true,
+    secret: 'sesSecret'
+}))
 
 app.locals.mongoose = mongoose;
 
