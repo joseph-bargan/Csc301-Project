@@ -4,9 +4,11 @@ module.exports = function (app) {
 
     //Url routes
 
-    app.get('/', index.render);
+    app.get('/', index.home);
 
     app.post('/', index.redirect_posts);
+
+    app.post('/login', index.login);
 
     app.get('/posts', index.to_post);
 
