@@ -6,13 +6,9 @@ var schema = mongoose.Schema;
 //Sample model-schema to be stored in databse
 var Test = new schema({
 
-    username: {
+    name: {
         type: String,
- 
-    },
-    passsword: {
-        type: String,
-    },
+    };
 
 });
 
