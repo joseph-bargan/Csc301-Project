@@ -8,7 +8,7 @@ var Test = new schema({
 
     name: {
         type: String,
-    };
+    }
 
 });
 
@@ -43,25 +43,6 @@ Test.set('toJSON', {
     virtuals: true
 });
 
-const User = new schema({
-
-    firstname: {
-        type: String
-    },
-
-    lastname: {
-        type: String,
-    },
-
-    email: String,
-    username: String,
-    password: String,
-});
-
-User.set('toJSON', {
-    getters: true,
-    virtuals: true
-});
 
 
 mongoose.model('User', User);
