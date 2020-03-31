@@ -6,13 +6,9 @@ var schema = mongoose.Schema;
 //Sample model-schema to be stored in databse
 var Test = new schema({
 
-    username: {
+    name: {
         type: String,
- 
-    },
-    passsword: {
-        type: String,
-    },
+    }
 
 });
 
@@ -40,6 +36,14 @@ User.set('toJSON', {
     getters: true,
     virtuals: true
 });
+
+
+Test.set('toJSON', {
+    getters: true,
+    virtuals: true
+});
+
+
 
 mongoose.model('User', User);
 mongoose.model('Test', Test);

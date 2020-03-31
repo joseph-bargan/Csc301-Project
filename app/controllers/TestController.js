@@ -4,6 +4,9 @@ var mongoose = require('mongoose');
 var Test = mongoose.model('Test');
 var User = mongoose.model('User');
 
+var fs = require("fs");
+
+
 var path = require('path');
 
 //Controller functions called on by the route script
@@ -32,6 +35,38 @@ exports.to_post = function (req, res) {
 
 exports.read_post = function (req, res) {
 
+
+    //TODO: Read (res.body) for post text
+    var l = new Test(req.body);
+    console.log(l);
+
+    var x = l.toJSON();
+
+
+    console.log(x.name);
+
+    l.save();
+
+    fs.appendFile('public/test.txt', x.name + '\n', function (err) {
+        if (err) {
+            console.log(err);
+            return console.error
+        };
+    });
+    /*
+    fs.appendFile('app/views/UI.ejs', x.name + '', function (err) {
+        if (err) {
+            console.log(err);
+            return console.error
+        };
+    });
+    */
+
+
+    res.render('UI.ejs');
+
+
+
     //TODO: Read (res.body) for post text
     var l = new Test(req.body);
     console.log(l);
@@ -40,6 +75,7 @@ exports.read_post = function (req, res) {
 
 
     //res.render('UI.ejs');
+
 };
 
 exports.login = function (req, res) {
