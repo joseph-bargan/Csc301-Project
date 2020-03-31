@@ -3,7 +3,9 @@
 var mongoose = require('mongoose');
 var Test = mongoose.model('Test');
 var User = mongoose.model('User');
+
 var fs = require("fs");
+
 
 var path = require('path');
 
@@ -33,6 +35,7 @@ exports.to_post = function (req, res) {
 
 exports.read_post = function (req, res) {
 
+
     //TODO: Read (res.body) for post text
     var l = new Test(req.body);
     console.log(l);
@@ -61,6 +64,17 @@ exports.read_post = function (req, res) {
 
 
     res.render('UI.ejs');
+
+
+
+    //TODO: Read (res.body) for post text
+    var l = new Test(req.body);
+    console.log(l);
+
+    res.json(l);
+
+
+    //res.render('UI.ejs');
 
 };
 

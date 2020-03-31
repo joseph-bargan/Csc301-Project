@@ -3,8 +3,10 @@
     "",
     "\\app",
     "\\app\\controllers",
-    "\\app\\views"
+    "\\app\\models",
+    "\\app\\routes",
+    "\\app\\views",
+    "\\config"
   ],
-  "SelectedNode": "\\server.js",
   "PreviewInSolutionExplorer": false
 }
