@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9));
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+}
+img {
+    width: 70px;
+    position: absolute;
+    left: 5%;
+    top: 8%;
+    transform: translate(-50%, -80%);
+}
+.mainbar {
+    text-align: center;
+    background: rgb(0,0,0);
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+}
+.mainbar ul{
+    display: inline-flex;
+    list-style: none;
+    
+}
+.mainbar ul li{
+    width: 150px;
+    margin: 15px;
+    padding: 15px;
+}
+.mainbar ul li a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: aquamarine;
+}
+.active, .mainbar ul li:hover{
+    background: #222020;
+    border-radius: 10px;
+}
+.subbar{
+    display: none;
+}
+.mainbar ul li:hover .subbar{
+    display: block;
+    position: absolute;
+    background: rgb(0,0,0);
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.mainbar ul li:hover .subbar ul {
+    display: block;
+    margin: 10px;
+}
+.mainbar ul li:hover .subbar ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted aquamarine;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.mainbar ul li:hover .subbar ul li a:hover{
+    color: lightseagreen;
+}
+
+.body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 20px auto 10px auto;
+    background: transparent;
+}
+.c1 {
+    width: 21%;
+    float: left;
+    height: 600px;
+    margin-left: 2%;
+    background: black;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+}
+.c2 {
+    width: 50%;
+    margin-left: 2%;
+    float: left;
+    height: 100vh;
+    background: black;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+}
+.c3 {
+    width: 21%;
+    float: right;
+    height: 600px;
+    margin-right: 2%;
+    background: black;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+}
+.input-box {
+    padding: 20px 20px 30px 70px;
+    border-bottom: 2px solid #222020;
+}
+
+.input-box input {
+    width: 500px;
+    margin-bottom: 15px;
+    padding: 12px 0;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    background: transparent;
+    letter-spacing: 2px;
+}
+
+.input-box input:focus, .input-box input:valid, .input-box input:hover {
+    border-bottom: 1px solid ;
+}
+button {
+    background: aquamarine;
+    border: none;
+    outline: none;
+    color: black;
+    border: 2px solid black;
+    margin-left: 20px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+button:hover, button:active {
+    background-color: lightseagreen;
+
+}

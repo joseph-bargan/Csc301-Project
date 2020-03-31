@@ -6,7 +6,9 @@
     "\\app\\models",
     "\\app\\routes",
     "\\app\\views",
-    "\\config"
+    "\\config",
+    "\\public"
   ],
+  "SelectedNode": "\\app\\views\\SigninPage.ejs",
   "PreviewInSolutionExplorer": false
 }
