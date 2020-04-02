@@ -19,13 +19,7 @@ Test.set('toJSON', {
 
 const User = new schema({
 
-    firstname: {
-        type: String
-    },
-
-    lastname: {
-        type: String,
-    },
+    
 
     email: String,
     username: String,

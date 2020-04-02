@@ -33,17 +33,17 @@ img {
 }
 
 #register {
-    
-    height: 520px;
+    top: 80px;
+    height: 410px;
     margin-left: -25px;
     background: rgba(0,0,0,.6);
     box-shadow: 0 15px 25px rgba(0,0,0,.5);
-    padding: 25px;
+    padding: 40px 25px 25px 25px;
     border-radius: 25px;
 }
 #login {
     top: 100px;
-    height: 320px;
+    height: 350px;
     margin-left: -25px;
     background: rgba(0,0,0,.6);
     box-shadow: 0 15px 25px rgba(0,0,0,.5);
@@ -114,7 +114,7 @@ button {
 }
 
     button:hover, button:active {
-        background-color: lightcoral;
+        background-color: lightseagreen;
     }
 
 input[type="checkbox"] {
@@ -152,10 +152,15 @@ p {
     }
 
 
-#login /*or .register*/ {
+#login {
     left: 50px;
 }
 
 #register {
     left: 450px;
+}
+h1{
+    color: aquamarine;
+    text-align: center;
+    margin-bottom: 20px;
 }
