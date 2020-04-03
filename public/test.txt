@@ -1,15 +1,5 @@
-my
-name
-jef
-c
-c
-c
-c
-c
-c
-c
-c
-c
-hey my name is
-sid is myhello
-hello
+jef: hey my name is
+sid: sid is myhello
+user: hello
+sid: test user
+sid: test user
