@@ -10,6 +10,8 @@ module.exports = function (app) {
 
     app.post('/login', index.login);
 
+    app.get('/logout', index.logout);
+
     app.get('/posts', index.to_post);
 
     app.post('/posts', index.read_post);
