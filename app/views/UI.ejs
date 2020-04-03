@@ -64,8 +64,11 @@
                     <div class="input-box">
                         <input type="text" name="name" placeholder="Write Something">
                         <button type="submit">Post</button>
+                        
                     </div>
-                    <div id="posts"></div>
+                    <div id="posts">
+                        
+                    </div>
 
                 </div>
                 <div class="c3"></div>
@@ -81,7 +84,7 @@
             var text = await res.text()
             var list = await text.split('\n')
             for (var i = list.length-2; i > -1; i--) {
-                document.getElementById("posts").innerHTML += '<p>' + list[i] + '</p>'
+                document.getElementById("posts").innerHTML +=  '<p>' + list[i] + '<br/>' + '<button type="button" class="delete">Delete</button>' + '</p>' 
             }
         }
         
