@@ -12,7 +12,12 @@ var path = require('path');
 //Controller functions called on by the route script
 exports.home = function (req, res) {
 
-    res.render('SigninPage.ejs')
+    if (req.signedCookies.rme == 'true') {
+        res.redirect('/posts')
+    }
+    else {
+        res.render('SigninPage.ejs')
+    }
 };
 
 exports.redirect_posts = function (req, res) {
@@ -21,8 +26,9 @@ exports.redirect_posts = function (req, res) {
     //TODO: Read (res.body) for login info
     const user = new User(req.body);
     console.log(req.body);
-    console.log(user);
     user.save();
+
+    res.cookie('user', req.body.username, { signed: true });
 
     //res.json(user);
     res.redirect('/posts')
@@ -44,37 +50,21 @@ exports.read_post = function (req, res) {
 
 
     console.log(x.name);
+    console.log(req.signedCookies.user);
+
+    var c_user = req.signedCookies.user;
 
     l.save();
 
-    fs.appendFile('public/test.txt', x.name + '\n', function (err) {
+    fs.appendFile('public/test.txt', c_user + ': ' +  x.name + '\n', function (err) {
         if (err) {
             console.log(err);
             return console.error
         };
     });
-    /*
-    fs.appendFile('app/views/UI.ejs', x.name + '', function (err) {
-        if (err) {
-            console.log(err);
-            return console.error
-        };
-    });
-    */
 
 
     res.render('UI.ejs');
-
-
-
-    //TODO: Read (res.body) for post text
-    var l = new Test(req.body);
-    console.log(l);
-
-    res.json(l);
-
-
-    //res.render('UI.ejs');
 
 };
 
@@ -99,7 +89,15 @@ exports.login = function (req, res) {
             var z = ii.password.localeCompare(req.body.password);
 
             if (!z) {
+                res.cookie('user', ii.username, { signed: true });
                 console.log('logged in as ' + ii.username);
+
+                console.log(req.body.rme);
+                var rme = req.body.rme;
+                if (rme) {
+                    console.log('true');
+                    res.cookie('rme', 'true', { signed: true });
+                }
                 res.redirect('/posts');
             }
 
@@ -109,3 +107,11 @@ exports.login = function (req, res) {
         })
     })
 };
+
+exports.logout = function (req, res) {
+
+    res.clearCookie("user");
+    res.clearCookie("rme");
+
+    res.redirect('/');
+}
