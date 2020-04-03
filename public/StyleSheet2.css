@@ -4,6 +4,12 @@
     box-sizing: border-box;
     
 }
+.light-mode .delete {
+    color: cornflowerblue;
+}
+.light-mode .delete:hover, .light-mode .delete:active, .light-mode .delete:focus {
+    color: lightslategray;
+}
 .light-mode #posts{
     color: black;
 }
@@ -283,4 +289,20 @@ input:checked + .slider:before {
 }
 label{
     color: aquamarine;
+}
+.delete {
+    outline: none;
+    background: none;
+    color: aquamarine;
+    border: none;
+    padding: 15px 0 0 0;
+    margin-left: 60px;
+    border-radius: 0;
+    
+}
+.delete:hover, .delete:active, .delete:focus {
+    background: none;
+    outline: none;
+    color: lightseagreen;
+    border: none;
 }
